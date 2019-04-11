@@ -1,15 +1,9 @@
-<?php
-/* @var $this SiteController */
-/* @var $model LoginForm */
-/* @var $form CActiveForm  */
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href = "<?php print Yii::app()->request->baseUrl;?>/">Home</a></li>
+  <li class="breadcrumb-item active">Sign In</li>
+</ol>
 
-$this->pageTitle=Yii::app()->name . ' - Login';
-$this->breadcrumbs=array(
-	'Login',
-);
-?>
-
-<h1>Login</h1>
+<h3>Login</h3>
 
 <p>Please fill out the following form with your login credentials:</p>
 

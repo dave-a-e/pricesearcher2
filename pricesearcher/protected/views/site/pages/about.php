@@ -1,12 +1,14 @@
-<?php
-/* @var $this SiteController */
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href = "<?php print Yii::app()->request->baseUrl;?>/">Home</a></li>
+  <li class="breadcrumb-item active">About <?php print Yii::app()->name;?></li>
+</ol>
 
-$this->pageTitle=Yii::app()->name . ' - About';
-$this->breadcrumbs=array(
-	'About',
-);
-?>
-<h1>About</h1>
+<h3>About <?php print Yii::app()->name;?></h3>
 
-<p>This is a "static" page. You may change the content of this page
-by updating the file <code><?php echo __FILE__; ?></code>.</p>
+<p>
+<?php print Yii::app()->name;?> is a site which connects International Students with the stuff they need for their new experience.
+</p>
+
+<p>
+
+</p>

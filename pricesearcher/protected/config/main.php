@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'Pricesearcher',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -19,27 +19,22 @@ return array(
 	),
 
 	'modules'=>array(
-		// uncomment the following to enable the Gii tool
-		/*
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
+			'password'=>'Nak3d1adygii',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-		*/
+        'api',
 	),
 
 	// application components
 	'components'=>array(
-
-		'user'=>array(
-			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
-		),
+        'user'=>array(
+            'class' => 'WebUser',
+        ),
 
 		// uncomment the following to enable URLs in path-format
-		/*
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
@@ -47,11 +42,30 @@ return array(
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
+			'showScriptName'=>false,
 		),
-		*/
 
-		// database settings are configured in database.php
-		'db'=>require(dirname(__FILE__).'/database.php'),
+        /*
+        'db'=>array(
+                'connectionString' => 'mysql:host=10.16.16.4;dbname=willo-eig-u-171187',
+                'emulatePrepare' => true,
+                'enableProfiling'=>true,
+                'enableParamLogging' => true,
+                'username' => 'willo-eig-u-171187',
+                'password' => 'NB/rtzzCw',
+                'charset' => 'utf8',
+            ),
+        */
+
+		'db'=>array(
+	            'connectionString' => 'mysql:host=127.0.0.1;dbname=shareling',
+	            'emulatePrepare' => true,
+	            'enableProfiling'=>true,
+	            'enableParamLogging' => true,
+	            'username' => 'root',
+	            'password' => '',
+	            'charset' => 'utf8',
+	        ),
 
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
